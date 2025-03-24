@@ -31,7 +31,7 @@ const Navbar = () => {
             key={section}
             href={`#${section}`}
             className={`px-4 py-2 rounded-md transition duration-300 ${
-              activeSection === section ? "bg-[#D97183] text-white" : "text-[#675D78] hover:text-[#392F4B]"
+              activeSection === section ? "bg-[#D97183] text-white" : "text-[#675D78] hover:text-[#2E2D2D]"
             }`}
           >
             {section.toUpperCase()}

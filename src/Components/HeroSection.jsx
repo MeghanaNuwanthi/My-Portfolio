@@ -7,7 +7,7 @@ const HeroSection = () => {
     <section id="home" className="flex flex-row items-center justify-center">
       {/* Text Section */}
       <div className="text-right lg:text-right lg:mr-10 ">
-        <h1 className="text-2xl lg:text-4xl font-bold text-[#392F4B]">
+        <h1 className="text-2xl lg:text-4xl font-bold text-[#2E2D2D]">
           Hello, I’m{" "}
           <span className="text-[#D97183]">
             <Typewriter
@@ -19,7 +19,7 @@ const HeroSection = () => {
             />
           </span>
         </h1>
-        <p className="text-xl lg:text-3xl text-[#392F4B] mt-2">
+        <p className="text-xl lg:text-3xl text-[#2E2D2D] mt-2">
           Professional UI/UX Designer
         </p>
       </div>

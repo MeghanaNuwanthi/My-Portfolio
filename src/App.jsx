@@ -4,8 +4,8 @@ import Navbar from "../src/Components/Navbar";
 import HeroSection from "../src/Components/HeroSection";
 import AboutSection from "../src/Components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
-import CertificatesSection from "./components/CertificatesSection";
-import ContactSection from "./components/ContactSection";
+import CertificatesSection from "../src/Components/CertificatesSection";
+import ContactSection from "../src/Components/ContactSection";
 
 const App = () => {
   return (
