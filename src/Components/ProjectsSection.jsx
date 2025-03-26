@@ -1,54 +1,62 @@
 import React, { useState, useEffect } from "react";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight, FaArrowRight } from "react-icons/fa";
 
 const projects = [
   {
     id: 1,
-    title: "Eight Reasons why Innovation beats Efficiency",
-    description: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
-    date: "Jan 20, 2019",
-    comments: "2 Comments",
-    image: "https://source.unsplash.com/300x200/?office,desk",
+    title: "TAVOLA - Table Reservation System",
+    Link: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
+    tech: "Technologies Used: HTML, CSS, PHP, JavaScript, SQL",
+    comments: "Completed",
+    image: "src/assets/Tavola.png",
   },
   {
     id: 2,
-    title: "UI/UX Design Trends in 2024",
-    description: "Explore the latest design trends for 2024...",
-    date: "Feb 10, 2024",
-    comments: "5 Comments",
-    image: "https://source.unsplash.com/300x200/?technology,desk",
+    title: " ZENOFY E-commerce Web application",
+    Link: "Explore the latest design trends for 2024...",
+    tech: "Technologies Used: HTML, CSS, PHP, JavaScript, SQL",
+    comments: "Ongoing",
+    image: "src/assets/zenofy.png",
   },
   {
     id: 3,
-    title: "How Minimalism Improves User Experience",
-    description: "Minimalist design enhances usability and aesthetics...",
-    date: "Mar 15, 2023",
-    comments: "3 Comments",
-    image: "https://source.unsplash.com/300x200/?minimalist,design",
+    title: "MessageMe mobile application",
+    Link: "Minimalist design enhances usability and aesthetics...",
+    tech: "Technologies Used: Java, XML ",
+    comments: "Completed",
+    image: "src/assets/MessageMe.png",
   },
   {
     id: 4,
-    title: "Dark Mode: A Trend or a Necessity?",
-    description: "Discover why dark mode is preferred by many users...",
-    date: "Apr 5, 2023",
-    comments: "7 Comments",
-    image: "https://source.unsplash.com/300x200/?darkmode,technology",
+    title: "SpiritX Login System",
+    Link: "Discover why dark mode is preferred by many users...",
+    tech: "Technologies Used: React.js, TailwindCSS, SQL",
+    comments: "Completed",
+    image: "src/assets/Login.png",
   },
   {
     id: 5,
-    title: "The Psychology of Colors in UI/UX",
-    description: "Learn how colors influence user behavior and perception...",
-    date: "May 12, 2023",
-    comments: "4 Comments",
-    image: "https://source.unsplash.com/300x200/?colors,uiux",
+    title: " Serendib flour company Warehouse Project",
+    Link: "Learn how colors influence user behavior and perception...",
+    tech: "Technologies Used: React.js, Node.js, TailwindCSS, SQL, Roboflow workspace (AI integration)",
+    comments: "Ongoing",
+    image: "src/assets/Serendib.png",
   },
   {
     id: 6,
-    title: "Typography: The Secret to Better Readability",
-    description: "Good typography enhances user engagement...",
-    date: "Jun 8, 2023",
-    comments: "6 Comments",
-    image: "https://source.unsplash.com/300x200/?typography,design",
+    title: "Pet Care Web application",
+    Link: "Good typography enhances user engagement...",
+    tech: "Technologies Used: HTML, CSS, JavaScript",
+    comments: "Completed",
+    image: "src/assets/PetCare.png",
+  },
+  {
+    id: 7,
+    title: "Human-Resource Management System Login Page ",
+    Link: "Good typography enhances user engagement...",
+    tech: "Technologies Used: HTML, CSS, JavaScript",
+    comments: "Completed",
+    image: "src/assets/HRM.png",
   },
 ];
 
@@ -114,24 +122,38 @@ const ProjectsSection = () => {
               }}
             >
               {projects.map((project) => (
-                <div
+              <div
                   key={project.id}
                   className="p-4 flex-shrink-0"
                   style={{
                     width: `calc(100% / ${visibleProjects})`,
-                  }}
-                >
-                  <div className="bg-[#2E2D2D] text-white rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
-                    <img src={project.image} alt="Project" className="w-full h-40 object-cover" />
-                    <div className="p-4 flex flex-col flex-grow">
+                  }}>
+                {/* Project Card */}
+                <div className="bg-[#2E2D2D] text-white rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+
+                  <div className="relative group">  
+                    <img
+                        src={project.image}
+                        alt="Project"
+                        className="w-full h-50 object-cover transition duration-300 group-hover:opacity-40"
+                      />
+                    {/* Hover Overlay Button */}
+                    <div className="absolute inset-0 flex pt-20 h-30 cursor-pointer justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <button className="p-3 bg-[#2E2D2D] rounded-full">
+                      <FaArrowRight />
+                    </button>
+                    </div>
+                  
+                    <div className="p-4 flex flex-col flex-grow pl-2 pr-2 pb-2">
                       <p className="text-sm opacity-70">
-                        {project.date} - {project.comments}
+                        {project.comments}
                       </p>
-                      <h3 className="text-lg font-bold">{project.title}</h3>
-                      <p className="text-sm flex-grow">{project.description}</p>
+                      <h3 className="text-lg font-bold pb-1 transition duration-300 group-hover:text-[#D97183]">{project.title}</h3>
+                      <p className="text-sm opacity-70 pb-2">{project.tech}</p>
                     </div>
                   </div>
                 </div>
+              </div>
               ))}
             </div>
           </div>
