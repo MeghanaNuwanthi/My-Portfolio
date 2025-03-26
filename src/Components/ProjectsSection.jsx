@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     title: "TAVOLA - Table Reservation System",
-    Link: "Lorem ipsum dolor sit amet consectetur adipiscing elit...",
+    Link: "https://github.com/MeghanaNuwanthi/Table-Reservation-System",
     tech: "Technologies Used: HTML, CSS, PHP, JavaScript, SQL",
     comments: "Completed",
     image: "src/assets/Tavola.png",
@@ -13,7 +13,7 @@ const projects = [
   {
     id: 2,
     title: " ZENOFY E-commerce Web application",
-    Link: "Explore the latest design trends for 2024...",
+    Link: "https://github.com/IHANsaja/zenofy-website",
     tech: "Technologies Used: HTML, CSS, PHP, JavaScript, SQL",
     comments: "Ongoing",
     image: "src/assets/zenofy.png",
@@ -21,7 +21,7 @@ const projects = [
   {
     id: 3,
     title: "MessageMe mobile application",
-    Link: "Minimalist design enhances usability and aesthetics...",
+    Link: "https://github.com/MeghanaNuwanthi/Message-Me-Mobile-App",
     tech: "Technologies Used: Java, XML ",
     comments: "Completed",
     image: "src/assets/MessageMe.png",
@@ -30,14 +30,14 @@ const projects = [
     id: 4,
     title: "SpiritX Login System",
     Link: "Discover why dark mode is preferred by many users...",
-    tech: "Technologies Used: React.js, TailwindCSS, SQL",
+    tech: "https://github.com/MeghanaNuwanthi/SpiritX_DOMinators_LoginPage",
     comments: "Completed",
     image: "src/assets/Login.png",
   },
   {
     id: 5,
     title: " Serendib flour company Warehouse Project",
-    Link: "Learn how colors influence user behavior and perception...",
+    Link: "https://github.com/IHANsaja/Serendib-Warehouse-Management-System",
     tech: "Technologies Used: React.js, Node.js, TailwindCSS, SQL, Roboflow workspace (AI integration)",
     comments: "Ongoing",
     image: "src/assets/Serendib.png",
@@ -45,7 +45,7 @@ const projects = [
   {
     id: 6,
     title: "Pet Care Web application",
-    Link: "Good typography enhances user engagement...",
+    Link: "https://github.com/MeghanaNuwanthi/Pet-Care-website",
     tech: "Technologies Used: HTML, CSS, JavaScript",
     comments: "Completed",
     image: "src/assets/PetCare.png",
@@ -53,7 +53,7 @@ const projects = [
   {
     id: 7,
     title: "Human-Resource Management System Login Page ",
-    Link: "Good typography enhances user engagement...",
+    Link: "https://github.com/MeghanaNuwanthi/Human-Resource-Management-System",
     tech: "Technologies Used: HTML, CSS, JavaScript",
     comments: "Completed",
     image: "src/assets/HRM.png",
@@ -103,7 +103,7 @@ const ProjectsSection = () => {
         <div className="h-1 w-16 bg-[#D97183] mb-6 "></div>
 
         {/* Project container */}
-        <div className="flex items-center justify-center space-x-4">
+        <div className="flex items-center justify-center space-x-4 ">
           {/* Left Arrow */}
           <button
             className="p-3 bg-gray-300 rounded-full disabled:opacity-50"
@@ -129,9 +129,11 @@ const ProjectsSection = () => {
                     width: `calc(100% / ${visibleProjects})`,
                   }}>
                 {/* Project Card */}
-                <div className="bg-[#2E2D2D] text-white rounded-lg overflow-hidden shadow-lg flex flex-col h-full">
+              <a href={project.Link} target="_blank" rel="noopener noreferrer">
+                <div className="bg-[#2E2D2D] text-white rounded-lg overflow-hidden shadow-lg flex flex-col h-full ">
 
-                  <div className="relative group">  
+                  
+                  <div className="relative group ">  
                     <img
                         src={project.image}
                         alt="Project"
@@ -153,6 +155,7 @@ const ProjectsSection = () => {
                     </div>
                   </div>
                 </div>
+              </a>
               </div>
               ))}
             </div>
